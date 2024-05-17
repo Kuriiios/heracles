@@ -17,46 +17,48 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `simple-mvc`
+-- Base de données :  `heracleslabour`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `item`
+-- Structure de la table `characters`
 --
 
-CREATE TABLE `item` (
+CREATE TABLE `characters` (
   `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL
+  `strength` int(11) NOT NULL
+  `dexterity` int(11) NOT NULL
+  `life` int(11) DEFAULT '100'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `item`
+-- Contenu de la table `characters`
 --
 
-INSERT INTO `item` (`id`, `title`) VALUES
-(1, 'Stuff'),
-(2, 'Doodads');
+INSERT INTO `heracles` (`name`, 'strength', 'dexterity') VALUES
+('👨 Heracles', '20', '6'),
+('🦁 Lion de Nemee', '11', '13');
 
 --
 -- Index pour les tables exportées
 --
 
 --
--- Index pour la table `item`
+-- Index pour la table `characters`
 --
-ALTER TABLE `item`
-  ADD PRIMARY KEY (`id`);
+
 
 --
 -- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT pour la table `item`
+-- AUTO_INCREMENT pour la table `characters`
 --
-ALTER TABLE `item`
+ALTER TABLE `characters`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

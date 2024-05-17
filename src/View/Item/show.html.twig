@@ -1,8 +1,8 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Item {{ item.title }}</h1>
-    <p>{{ item.id }}. {{ item.title }}</p>
+    <h1>Item {{ item.name }}</h1>
+    <p>{{ item.id }}. {{ item.name }}</p>
     <a href="/items/edit?id={{ item.id }}">Edit</a>
     <form action="/items/delete" method="POST">
         <input type="hidden" name="id" value="{{ item.id }}">
